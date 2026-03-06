@@ -10,8 +10,6 @@
 💡 **워플 올백 애드온 커스텀 블록 구매하기:** 
 [https://community.wplaybook.com/products/all100-reborn-add-on/](https://community.wplaybook.com/products/all100-reborn-add-on/)
 
-워드프레스 에디터(구텐베르크)를 사용 중이시라면, 버튼 블록을 생성하고 우측 설정 메뉴의 **[고급]** 탭에서 **[추가 CSS 클래스]** 부분에 `wplaybook-button`만 입력해 보세요. 버튼이 빛나기 시작할 겁니다!
-
 ## Installation (설치 방법)
 
 1. 우측의 깃허브 코드 다운로드(.zip)를 받으시거나, 릴리즈 탭에서 플러그인 `.zip` 설치 파일을 다운로드합니다.
