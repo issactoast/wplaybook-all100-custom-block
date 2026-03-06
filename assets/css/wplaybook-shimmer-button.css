@@ -1,0 +1,42 @@
+.wplaybook-button {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease !important;
+    display: inline-block; /* Ensures padding and transform work well */
+    padding: 12px 24px;    /* Example styling */
+    background: #007bff;   /* Example styling */
+    color: white;          /* Example styling */
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;      /* Necessary for the shimmer effect to stay inside */
+}
+
+.wplaybook-button:hover {
+    box-shadow: none !important;
+    transform: translateY(2px) !important;
+}
+
+.wplaybook-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(
+        120deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 60%
+    );
+    background-size: 300% 100%;
+    animation: shine-move 5s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes shine-move {
+    0% { background-position: 100% 0; }
+    45% { background-position: -200% 0; }
+    100% { background-position: -200% 0; }
+}

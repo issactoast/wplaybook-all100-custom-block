@@ -1,0 +1,31 @@
+name: Build release zip
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build zip
+      run: |
+        # Create a directory with the plugin name
+        mkdir wplaybook-shimmer-button
+        
+        # Copy necessary files into the directory
+        rsync -av --progress . wplaybook-shimmer-button --exclude=wplaybook-shimmer-button --exclude=.git --exclude=.github --exclude=.gitignore
+        
+        # Create the zip file
+        zip -r wplaybook-shimmer-button.zip wplaybook-shimmer-button/
+        
+    - name: Upload Release Asset
+      if: github.event_name == 'release'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: wplaybook-shimmer-button.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
