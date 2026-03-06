@@ -14,18 +14,18 @@ jobs:
     - name: Build zip
       run: |
         # Create a directory with the plugin name
-        mkdir wplaybook-shimmer-button
+        mkdir wplaybook-all100-custom-block
         
         # Copy necessary files into the directory
-        rsync -av --progress . wplaybook-shimmer-button --exclude=wplaybook-shimmer-button --exclude=.git --exclude=.github --exclude=.gitignore
+        rsync -av --progress . wplaybook-all100-custom-block --exclude=wplaybook-all100-custom-block --exclude=.git --exclude=.github --exclude=.gitignore
         
         # Create the zip file
-        zip -r wplaybook-shimmer-button.zip wplaybook-shimmer-button/
+        zip -r wplaybook-all100-custom-block.zip wplaybook-all100-custom-block/
         
     - name: Upload Release Asset
       if: github.event_name == 'release'
       uses: softprops/action-gh-release@v1
       with:
-        files: wplaybook-shimmer-button.zip
+        files: wplaybook-all100-custom-block.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
