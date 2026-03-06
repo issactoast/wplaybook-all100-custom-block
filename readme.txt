@@ -14,6 +14,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 이 플러그인은 가볍고 최적화된 CSS 파일을 워드프레스 사이트에 로드해 줍니다. 
 해당 코드는 `wplaybook-button` 이라는 클래스가 추가된 어떤 요소(버튼, 링크 등)든 살아 숨 쉬는 듯한 예쁜 반짝임(Shimmer) 애니메이션을 부여해 줍니다.
 
+💡 **워플 올백 애드온 커스텀 블록 구매하기:** 
+[https://community.wplaybook.com/products/all100-reborn-add-on/](https://community.wplaybook.com/products/all100-reborn-add-on/)
+
 워드프레스 에디터(구텐베르크)를 사용 중이시라면, 버튼 블록을 생성하고 우측 설정 메뉴의 [고급] 탭에서 [추가 CSS 클래스] 부분에 `wplaybook-button`만 입력해 보세요. 버튼이 빛나기 시작할 겁니다!
 
 == Installation (설치 방법) ==
