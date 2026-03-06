@@ -3,7 +3,7 @@
  * Plugin Name:       WPlaybook All100 Custom Block
  * Plugin URI:        https://wplaybook.com
  * Description:       Adds a beautiful shimmer effect to buttons with the 'wplaybook-button' class.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            WPlaybook
  * Author URI:        https://wplaybook.com
  * License:           GPL-2.0+
@@ -16,6 +16,16 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// 깃허브 자동 업데이트 구현 (Plugin Update Checker)
+require 'plugin-update-checker/plugin-update-checker.php';
+$wplaybook_update_checker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+    'https://github.com/issactoast/wplaybook-all100-custom-block/',
+    __FILE__,
+    'wplaybook-all100-custom-block'
+);
+// 메인 브랜치 혹은 최신 릴리즈 기준으로 업데이트를 체크합니다.
+$wplaybook_update_checker->setBranch('main');
+
 /**
  * Enqueue plugin styles.
  */
@@ -25,7 +35,7 @@ function wplaybook_all100_custom_block_enqueue_styles()
         'wplaybook-all100-custom-block-style',
         plugin_dir_url(__FILE__) . 'assets/css/wplaybook-all100-custom-block.css',
         array(),
-        '1.0.0',
+        '1.1.0',
         'all'
     );
 }
