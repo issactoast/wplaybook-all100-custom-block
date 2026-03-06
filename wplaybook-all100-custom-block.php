@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       WPlaybook All100 Custom Block
  * Plugin URI:        https://wplaybook.com
- * Description:       워플 커스텀 블록을 사용해서 반짝이고 예쁜 버튼을 달아보세요. <a href="https://community.wplaybook.com/products/all100-reborn-add-on/" target="_blank">워플 커스텀 블록 구매하기</a>
+ * Description:       <a href="https://community.wplaybook.com/products/all100-reborn-add-on/" target="_blank">워플 커스텀 블록</a>을 사용해서 반짝이고 예쁜 버튼을 달아보세요.
  * Version:           1.1.0
  * Author:            WPlaybook
  * Author URI:        https://wplaybook.com
