@@ -1,9 +1,9 @@
 === WPlaybook All100 Custom Block ===
 Contributors: wplaybook
-Tags: button, shimmer, css, effect, styling, 버튼, 빛나는 효과, 효과
+Tags: button, shimmer, css, effect, styling, 버튼, 빛나는 효과, 효과, 별점, stars
 Requires at least: 5.0
 Tested up to: 6.4
-Stable tag: 1.0.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,3 +29,14 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 = 반짝이는 효과는 어떻게 적용하나요? =
 
 워드프레스의 어떤 위젯이나 블록이든, HTML의 클래스 부분에 `wplaybook-button`를 텍스트로 똑같이 입력해 주시기만 하면 됩니다.
+
+== Changelog ==
+
+= 1.2.0 =
+* 별점 숏코드 기능 지원 추가 (`[stars score="4.8"]`)
+
+= 1.1.1 =
+* 깃허브 자동 업데이트 기능 추가
+
+= 1.0.0 =
+* 첫 출시 및 커스텀 버튼 효과 제공
