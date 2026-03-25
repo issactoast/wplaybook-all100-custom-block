@@ -3,7 +3,7 @@
  * Plugin Name:       WPlaybook All100 Custom Block
  * Plugin URI:        https://wplaybook.com
  * Description:       <a href="https://community.wplaybook.com/products/all100-reborn-add-on/" target="_blank">워플 커스텀 블록</a>을 사용해서 반짝이고 예쁜 버튼을 달아보세요.
- * Version:           1.2.0
+ * Version:           1.2.1
  * Author:            WPlaybook
  * Author URI:        https://wplaybook.com
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ function wplaybook_all100_custom_block_enqueue_styles()
         'wplaybook-all100-custom-block-style',
         plugin_dir_url(__FILE__) . 'assets/css/wplaybook-all100-custom-block.css',
         array(),
-        '1.2.0',
+        '1.2.1',
         'all'
     );
 }
@@ -76,7 +76,7 @@ function custom_star_rating_shortcode($atts) {
     $filled_stars = str_repeat('<span style="color:' . $color . '; fill:currentColor; display:inline-block; line-height:0;">' . $star_svg . '</span>', $max);
 
     // HTML 출력 (인라인 플렉스로 글씨와 나란히 배치)
-    $html = '<span class="custom-star-rating" style="display:inline-flex; align-items:center; gap:6px; vertical-align:middle; line-height:1; margin-left:8px;">';
+    $html = '<span class="custom-star-rating" style="display:inline-flex; align-items:center; gap:6px; vertical-align:middle; line-height:1;">';
     
     // 1. '평점: 숫자' 텍스트 (font_size 독립 적용)
     if ($show_text) {
@@ -96,3 +96,13 @@ function custom_star_rating_shortcode($atts) {
     return $html;
 }
 add_shortcode('stars', 'custom_star_rating_shortcode');
+
+// 마지막 가격 확인 날짜 숏코드 [price_check]
+function custom_last_price_check_shortcode() {
+    // 현재 글의 마지막 수정 날짜와 시간 가져오기 (형식: YYYY-MM-DD HH시 mm분)
+    $modified_date = get_the_modified_date('Y-m-d H시 i분');
+    
+    // 텍스트 반환
+    return '마지막 가격 확인: ' . $modified_date;
+}
+add_shortcode('price_check', 'custom_last_price_check_shortcode');
