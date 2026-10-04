@@ -1,42 +1,48 @@
-.wplaybook-button {
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease !important;
-    display: inline-block; /* Ensures padding and transform work well */
-    padding: 12px 24px;    /* Example styling */
-    background: #007bff;   /* Example styling */
-    color: white;          /* Example styling */
-    text-decoration: none;
-    border-radius: 8px;
-    overflow: hidden;      /* Necessary for the shimmer effect to stay inside */
-}
-
-.wplaybook-button:hover {
-    box-shadow: none !important;
-    transform: translateY(2px) !important;
-}
-
-.wplaybook-button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(
-        120deg,
-        transparent 40%,
-        rgba(255, 255, 255, 0.4) 50%,
-        transparent 60%
-    );
-    background-size: 300% 100%;
-    animation: shine-move 5s infinite linear;
-    pointer-events: none;
-}
-
-@keyframes shine-move {
-    0% { background-position: 100% 0; }
-    45% { background-position: -200% 0; }
-    100% { background-position: -200% 0; }
-}
+/* WPlaybook effects only — native settings own backgrounds, typography, spacing, borders and simple shadows. */
+.wplaybook-button{position:relative;z-index:1;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;}
+.wplaybook-button::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%);background-size:300% 100%;animation:shine-move 5s infinite linear;pointer-events:none;}
+@keyframes shine-move{0%{background-position:100% 0}45%,100%{background-position:-200% 0}}
+.wplaybook-button:hover{transform:translateY(2px);}
+[class*="wpl-design-"] .kb-button{max-width:100%;white-space:normal;overflow-wrap:anywhere;}[class*="wpl-design-"] .kt-btn-inner-text{min-width:0;word-break:keep-all;}[class*="wpl-design-"] .kb-svg-icon-wrap{flex-shrink:0;}
+[class*="wpl-design-"] .wp-block-kadence-advancedheading,[class*="wpl-design-"] .kt-svg-icon-list-text{word-break:keep-all;overflow-wrap:anywhere;}
+[class*="wpl-design-"] .kb-button:focus-visible{outline:3px solid #087f8c;outline-offset:5px;}
+[class*="wpl-design-"] .wp-block-kadence-advancedheading a:focus-visible{outline:3px solid #087f8c;outline-offset:3px;}
+[class*="wpl-design-table-"] .kb-table-container{overscroll-behavior-x:contain;scrollbar-width:thin;border-radius:inherit;}[class*="wpl-design-table-"] .kb-table-container::-webkit-scrollbar{height:5px;}[class*="wpl-design-table-"] .kb-table-container::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:8px;}
+.wp-block-kadence-column.wpl-design-list-sticker .wpl-list-title{transform:rotate(-2deg)}
+.wp-block-kadence-column.wpl-design-product-amazon-sticker > .kt-inside-inner-col{box-shadow:0 0 0 4px #fff,4px 8px 0 #e4bed3}
+.wp-block-kadence-column.wpl-design-product-amazon-sticker .wpl-product-label{transform:rotate(-2deg)}
+.wp-block-kadence-column.wpl-design-product-amazon-pixel > .kt-inside-inner-col{box-shadow:4px 0 0 #17251b,-4px 0 0 #17251b,0 4px 0 #17251b,0 -4px 0 #17251b,8px 8px 0 #17251b}
+.wp-block-kadence-column.wpl-design-pair-shine-warning .wpl-pair-title{position:relative;overflow:hidden}
+.wp-block-kadence-column.wpl-design-pair-shine-warning .wpl-pair-title::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%);background-size:300% 100%;animation:wpl-notice-shine 5s infinite linear;pointer-events:none;}
+.wp-block-kadence-column.wpl-design-pair-shine-success .wpl-pair-title{position:relative;overflow:hidden}
+.wp-block-kadence-column.wpl-design-pair-shine-success .wpl-pair-title::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%);background-size:300% 100%;animation:wpl-notice-shine 5s infinite linear;pointer-events:none;}
+.wp-block-kadence-column.wpl-design-pair-shine-blue .wpl-pair-title{position:relative;overflow:hidden}
+.wp-block-kadence-column.wpl-design-pair-shine-blue .wpl-pair-title::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%);background-size:300% 100%;animation:wpl-notice-shine 5s infinite linear;pointer-events:none;}
+.wp-block-kadence-column.wpl-design-pair-shine-yellow .wpl-pair-title{position:relative;overflow:hidden}
+.wp-block-kadence-column.wpl-design-pair-shine-yellow .wpl-pair-title::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%);background-size:300% 100%;animation:wpl-notice-shine 5s infinite linear;pointer-events:none;}
+.wp-block-kadence-column.wpl-design-pair-shine-red .wpl-pair-title{position:relative;overflow:hidden}
+.wp-block-kadence-column.wpl-design-pair-shine-red .wpl-pair-title::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%);background-size:300% 100%;animation:wpl-notice-shine 5s infinite linear;pointer-events:none;}
+.wp-block-kadence-column.wpl-design-pair-pixel > .kt-inside-inner-col{box-shadow:4px 0 0 #17251b,-4px 0 0 #17251b,0 4px 0 #17251b,0 -4px 0 #17251b,4px 8px 0 #17251b,8px 4px 0 #17251b}
+.wp-block-kadence-column.wpl-design-pair-sticker > .kt-inside-inner-col{box-shadow:0 0 0 4px #fff,3px 7px 0 #e4bed3}
+.wp-block-kadence-column.wpl-design-pair-sticker .wpl-pair-title{transform:rotate(-2deg)}
+.wp-block-kadence-column.wpl-design-product-coupang-sticker > .kt-inside-inner-col{box-shadow:0 0 0 4px #fff,4px 8px 0 #e4bed3}
+.wp-block-kadence-column.wpl-design-product-coupang-sticker .wpl-product-label{transform:rotate(-2deg)}
+.wp-block-kadence-column.wpl-design-product-coupang-pixel > .kt-inside-inner-col{box-shadow:4px 0 0 #17251b,-4px 0 0 #17251b,0 4px 0 #17251b,0 -4px 0 #17251b,8px 8px 0 #17251b}
+.wp-block-kadence-column.wpl-design-ticketcol .wpl-part-tickethead > .kt-inside-inner-col{clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 12px))}
+.wp-block-kadence-column.wpl-design-ticketcol .wpl-part-ticketbody > .kt-inside-inner-col{clip-path:polygon(12px 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%,0 12px)}
+.wp-block-kadence-column.wpl-design-memocol > .kt-inside-inner-col{position:relative}
+.wp-block-kadence-column.wpl-design-memocol > .kt-inside-inner-col::after{content:"";position:absolute;right:0;top:0;border-left:24px solid #e8d982;border-top:24px solid white;}
+.wpl-design-gradientcol .kb-button:hover{transform:translateY(-1px)}
+.wpl-design-stickercol .kb-button{transform:rotate(-2deg);box-shadow:0 0 0 4px white,3px 7px 0 #e4bed3}
+.wpl-design-stickercol .kb-button:hover{transform:rotate(0)}
+.wpl-design-stickercol .kb-button:active{transform:translateY(2px)}
+.wpl-design-pixelcol .kb-button{box-shadow:4px 0 0 #17251b,-4px 0 0 #17251b,0 4px 0 #17251b,0 -4px 0 #17251b,4px 8px 0 #17251b,8px 4px 0 #17251b}
+.wpl-design-pixelcol .kb-button:hover{transform:translateY(2px)}
+.wpl-design-pixelcol .kb-button:active{transform:translate(4px,4px);box-shadow:4px 0 0 #17251b,-4px 0 0 #17251b,0 4px 0 #17251b,0 -4px 0 #17251b}
+.wpl-design-boldcol .kb-button:hover{transform:translate(2px,2px)}
+.wpl-design-boldcol .kb-button:active{transform:translate(5px,5px);box-shadow:none}
+.wpl-design-raisedcol .kb-button:hover{transform:translateY(2px)}
+.wpl-design-raisedcol .kb-button:active{transform:translateY(5px);box-shadow:0 1px 0 #204739}
+.wpl-design-table-gradient .kb-table tr:first-child{background:linear-gradient(135deg,#f3e8ff,#eff6ff);}.wpl-design-table-gradient .kb-table tr:first-child th{background:transparent;}
+@keyframes wpl-notice-shine{0%{background-position:100% 0}45%,100%{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.wplaybook-button::after,[class*="wpl-design-pair-shine-"] .wpl-pair-title::after,[class*="wpl-design-product-"] .wpl-product-label::after{animation:none;}[class*="wpl-design-"] .kb-button{transition:none;}}

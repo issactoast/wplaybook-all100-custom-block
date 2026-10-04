@@ -2,8 +2,8 @@
 Contributors: wplaybook
 Tags: button, shimmer, css, effect, styling, 버튼, 빛나는 효과, 효과, 별점, stars
 Requires at least: 5.0
-Tested up to: 6.4
-Stable tag: 1.2.0
+Tested up to: 7.1
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,15 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 워드프레스의 어떤 위젯이나 블록이든, HTML의 클래스 부분에 `wplaybook-button`를 텍스트로 똑같이 입력해 주시기만 하면 됩니다.
 
 == Changelog ==
+
+= 1.3.1 =
+* 패턴의 배경, 테두리, 일반 그림자, 여백, 글꼴과 배치를 카덴스 기본 설정으로 전환했습니다.
+* 플러그인 CSS는 반짝임, 티켓 모양, 복합 그림자 등 기본 설정으로 구현할 수 없는 효과와 필요한 보정만 제공합니다.
+* 편집기와 공개 화면에서 공통 효과 스타일을 함께 불러옵니다.
+* 기존 별점과 가격 확인 숏코드를 유지합니다.
+
+= 1.2.1 =
+* 기존 버튼 효과를 개선했습니다.
 
 = 1.2.0 =
 * 별점 숏코드 기능 지원 추가 (`[stars score="4.8"]`)
